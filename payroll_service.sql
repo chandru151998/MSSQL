@@ -12,8 +12,8 @@ startDate Date
 );
 
 /* UC3 */
-Insert into employee_payroll values('vidhya',70000,GETDATE());
-Insert into employee_payroll values('Ganesh',80000,GETDATE());
+Insert into employee_payroll values('Vaishnavi',70000,GETDATE());
+Insert into employee_payroll values('Gourav',80000,GETDATE());
 Insert into employee_payroll values('Vishal',60000,GETDATE());
 Insert into employee_payroll values('Vaibhav',180000,GETDATE());
 Insert into employee_payroll values('Vinayak',100000,'2018-01-01');
@@ -28,15 +28,15 @@ SELECT salary FROM employee_payroll WHERE startDate BETWEEN CAST('2018-01-01' AS
 
 /* UC6 */
 ALTER table employee_payroll Add  Gender char ;
-UPDATE employee_payroll SET Gender = 'F' where name = 'Vidhya';
-UPDATE employee_payroll SET Gender = 'M' where name = 'Ganesh';
+UPDATE employee_payroll SET Gender = 'F' where name = 'Vaishnavi';
+UPDATE employee_payroll SET Gender = 'M' where name = 'Gourav';
 UPDATE employee_payroll SET Gender = 'M' where name = 'Vishal';
 UPDATE employee_payroll SET Gender = 'M' where name = 'Vaibhav';
 UPDATE employee_payroll SET Gender = 'M' where name = 'Vinayak';
 Select * from employee_payroll;
 
 /* UC7 */
-INSERT INTO employee_payroll values (6,'Ankita',60000,GETDATE(),'F');
+INSERT INTO employee_payroll values (6,'Arti',60000,GETDATE(),'F');
 Select * from employee_payroll;
 
 SELECT SUM(salary) FROM employee_payroll WHERE Gender = 'F' GROUP BY Gender;
