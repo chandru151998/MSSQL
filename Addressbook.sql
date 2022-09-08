@@ -17,10 +17,10 @@ email NVARCHAR(255)
 SELECT * FROM AddressBook;
 
 /* UC3 */
-INSERT INTO AddressBook VALUES('Chandru','Kalahalamath', 'Krishna Nilay', 'Gadag','Karnataka',582103,7406140157,'chandru151997@gmail.com');
-INSERT INTO AddressBook VALUES('Ganesh','Kalahalamath', 'Aashirvad Niwas', 'Gadag','Karnataka',512436,7894561235,'ganesh456@gmail.com');
-INSERT INTO AddressBook VALUES('Vishal','Kalahalamath', 'Sarswati complex', 'Vadodra','Gujrat',857691,4561237895,'vishal54@gmail.com');
-INSERT INTO AddressBook VALUES('Ram','C', 'Aashirvad Niwas', 'Benguluru','Karnatka',512346,7891234568,'ram158@gmail.com');
+INSERT INTO AddressBook VALUES('Vaishnavi','Kalahalamath', 'Aashirvad Niwas', 'Gadag','Karnataka',431205,1234567815,'vaishnavikalahalamath@gmail.com');
+INSERT INTO AddressBook VALUES('Gourav','Mundhe', 'Aashirvad Niwas', 'Gadag','Karnataka',512436,7894561235,'gouravmundhe@gmail.com');
+INSERT INTO AddressBook VALUES('Vishal','Kalahalamath', 'Sarswati complex', 'vadodra','Gujrat',857691,4561237895,'vishalkalahalamath@gmail.com');
+INSERT INTO AddressBook VALUES('Vidhya','Kalahalamath', 'Aashirvad Niwas', 'Benguluru','Karnataka',512346,7891234568,'vaibhavkalahalamath@gmail.com');
 
 SELECT * FROM AddressBook;
 
@@ -47,27 +47,27 @@ email NVARCHAR(255)
 SELECT * FROM AddressBook;
 
 /* UC 3 */
-INSERT INTO AddressBook VALUES('Chandru','Kalahalamath', 'Krishna Nilay', 'Gadag','Karnataka',582103,7406140157,'chandru151997@gmail.com');
-INSERT INTO AddressBook VALUES('Ganesh','Kalahalamath', 'Aashirvad Niwas', 'Gadag','Karnataka',512436,7894561235,'ganesh456@gmail.com');
-INSERT INTO AddressBook VALUES('Vishal','Kalahalamath', 'Sarswati complex', 'vadodra','Gujrat',857691,4561237895,'vishal54@gmail.com');
-INSERT INTO AddressBook VALUES('Ram','C', 'Aashirvad Niwas', 'Benguluru','Karnatka',512346,7891234568,'ram158@gmail.com');
+INSERT INTO AddressBook VALUES('Vaishnavi','Kalahalamath', 'Aashirvad Niwas', 'Gadag','Karnataka',431205,1234567815,'vaishnavikalahalamath47@gmail.com');
+INSERT INTO AddressBook VALUES('Gourav','Mundhe', 'Aashirvad Niwas', 'Gadag','Karnataka',512436,7894561235,'gouravmundhe@gmail.com');
+INSERT INTO AddressBook VALUES('Vishal','Kalahalamath', 'Sarswati complex', 'vadodra','Gujrat',857691,4561237895,'vishalkalahalamath@gmail.com');
+INSERT INTO AddressBook VALUES('Vidhya','Kalahalamath', 'Aashirvad Niwas', 'Benguluru','Karnatka',512346,7891234568,'vaibhavkalahalamath@gmail.com');
 
 SELECT * FROM AddressBook;
 
 
 /* UC4 */
-Update AddressBook SET address = 'Matoshri Niwas' WHERE firstName = 'Chandru';
+Update AddressBook SET address = 'Matoshri Niwas' WHERE firstName = 'Vidhya';
 SELECT * FROM AddressBook;
 
-Update AddressBook SET firstName = 'Vaibhav' where email = 'vaibhav158@gmail.com';
-Update AddressBook SET address = 'GURU MAHAl' where email = 'vaibhav158@gmail.com';
-Update AddressBook SET city = 'Benguluru' where email = 'vaibhav158@gmail.com';
-Update AddressBook SET state = 'Karnatka' where email = 'vaibhav158@gmail.com';
+Update AddressBook SET firstName = 'Vaibhav' where email = 'vaibhavkalahalamath@gmail.com';
+Update AddressBook SET address = 'GURU MAHAl' where email = 'vaibhavkalahalamath@gmail.com';
+Update AddressBook SET city = 'Benguluru' where email = 'vaibhavkalahalamath@gmail.com';
+Update AddressBook SET state = 'Karnatka' where email = 'vaibhavkalahalamath@gmail.com';
 SELECT * FROM AddressBook;
 
 /* UC5 */
-INSERT INTO AddressBook VALUES('Ankita','Sonwane', 'Sarthi', 'Pune','Maharashtra',513468,9548621458,'ankita5148@gmail.com');
-DELETE FROM AddressBook WHERE firstName = 'Ankita';
+INSERT INTO AddressBook VALUES('Arti','S', 'Sarthi', 'Pune','Maharashtra',513468,9548621458,'artis@gmail.com');
+DELETE FROM AddressBook WHERE firstName = 'Arti';
 SELECT * FROM AddressBook;
 
 /* UC6 */
@@ -79,14 +79,14 @@ SELECT city, count(city) from AddressBook Group BY city;
 SELECT state, count(state) from AddressBook Group BY state;
 
 /* UC8 */
-SELECT firstName, lastName, address, city, state, zip, phoneNumber, email from AddressBook where city = 'Gadaga' ORDER BY firstName;
+SELECT firstName, lastName, address, city, state, zip, phoneNumber, email from AddressBook where city = 'jalna' ORDER BY firstName;
 
 /* UC9 */
 alter table AddressBook Add Type VARCHAR(255);
 SELECT * from AddressBook;
 
-Update AddressBook SET Type = 'Professional' WHERE firstName = 'Chandru';
-Update AddressBook SET Type = 'Family' WHERE firstName = 'Ganesh';
+Update AddressBook SET Type = 'Professional' WHERE firstName = 'Vaishnavi';
+Update AddressBook SET Type = 'Family' WHERE firstName = 'Gourav';
 Update AddressBook SET Type = 'Friend' WHERE firstName = 'Vishal';
 Update AddressBook SET Type = 'Friend' WHERE firstName = 'Vaibhav';
 
@@ -94,9 +94,9 @@ Update AddressBook SET Type = 'Friend' WHERE firstName = 'Vaibhav';
 SELECT Type, COUNT(Type) FROM AddressBook Group BY Type;  
 
 /* UC11 */
-INSERT INTO AddressBook VALUES('Ankita','Sonwane', 'Sarthi', 'Pune','Maharashtra',513468,9548621458,'ankita5148@gmail.com', 'Family');
-INSERT INTO AddressBook VALUES('Vetri','Bandger', 'Shanti Niwas', 'Ichalkaranji','Maharashtra',951423,9516284375,'vetri485@gmail.com', 'Friend');
-INSERT INTO AddressBook VALUES('Girish','Kusgal', 'Om Niwas', 'Ranchi','Zarkhand',852643,7531598464,'girish9@gmail.com', 'Professional');
+INSERT INTO AddressBook VALUES('Arti','S', 'Sarthi', 'Pune','Maharashtra',513468,9548621458,'artis@gmail.com', 'Family');
+INSERT INTO AddressBook VALUES('Shivani','Bandger', 'Shanti Niwas', 'Ichalkaranji','Maharashtra',951423,9516284375,'shivani@gmail.com', 'Friend');
+INSERT INTO AddressBook VALUES('Aishwarya','Kusgal', 'Om Niwas', 'Ranchi','Zarkhand',852643,7531598464,'aishwaryak@gmail.com', 'Professional');
 SELECT * FROM AddressBook;
 
 /* UC 12 */
@@ -139,9 +139,9 @@ foreign key (AddressBookID) references AddressBookTable(AddressBookID)
 );
 
 INSERT INTO Person values
-(1,'Friend','Vetri','V','Hosur','Hosur','TN',124563,1234567892,'vetri1542@gmail.com'),
-(2,'Family','Srikant','S','Vijayawada','Vijayawada','Andhra',548692,9865324785,'srikant2@gmail.com'),
-(1,'Professional','Aishwarya','K','Hydrabad','Hydrabad','TN',954862,15984263,'aishwaryaK@gmail.com');
+(1,'Friend','Shivani','B','Kolhapur','Pune','MH',124563,1234567892,'shivani@gmail.com'),
+(2,'Family','Arti','S','Indore','Indore','Gujrat',548692,7894561235,'artis@gmail.com'),
+(1,'Professional','Aishwarya','K','Hydrabad','Hydrabad','TN',954862,15984263,'aishwaryak@gmail.com');
 
 SELECT * FROM Person;
 
@@ -160,7 +160,7 @@ SELECT * FROM MapPersonType;
 select p.PersonID,concat(p.FirstName,p.LastName)as Name,concat(p.Address,',',p.City,',',p.State,',',p.ZipCode) as Address,
 p.PhoneNumber,p.Email,pt.PersonID,pt.PersonType,ab.AddressBookID ,ab.AddressBookName
 from AddressBookTable ab,Person p,PersonType pt,MapPersonType mpt
-where (ab.AddressBookID=p.AddressBookID  and p.PersonID=mpt.PersonID and mpt.PersonTypeID=pt.PersonID) and (City='Hosur' or State='TN') ;
+where (ab.AddressBookID=p.AddressBookID  and p.PersonID=mpt.PersonID and mpt.PersonTypeID=pt.PersonID) and (City='Pune' or State='MH') ;
 
 /* UC 7 */
 select count(*),State from Person 
@@ -175,7 +175,7 @@ select p.PersonID,concat(p.FirstName,p.LastName)as Name,
 concat(p.Address,',',p.City,',',p.State,',',p.ZipCode) as Address,p.PhoneNumber,p.Email,
 pt.PersonID,pt.PersonType,ab.AddressBookID ,ab.AddressBookName
 from AddressBookTable ab,Person p,PersonType pt,MapPersonType mpt
-where (ab.AddressBookID=p.AddressBookID  and p.PersonID=mpt.PersonID and mpt.PersonID=pt.PersonID) and (State='TN') order by FirstName;
+where (ab.AddressBookID=p.AddressBookID  and p.PersonID=mpt.PersonID and mpt.PersonID=pt.PersonID) and (State='MH') order by FirstName;
 
 /* UC 10 */
 SELECT COUNT(*),pt.PersonType FROM
